@@ -126,6 +126,7 @@ icons.forEach(element => {
     newBox.className = `box ${getIconClassHtml(element)}`;
     newBox.classList.add(element.color);
     container.append(newBox);
+    document.getElementsByClassName('div').style.property = "${icons[i].color}";
 })
 
 
