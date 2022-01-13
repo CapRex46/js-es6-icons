@@ -3,13 +3,13 @@
     margin: 0 auto;   
 }
 
-.filter{
+label{
     width: 100%;
     height: 100px;
     background: rgb(0, 195, 255);
 }
 
-#container{
+.container{
     width: 100%;
     background: lightgray;
 }
@@ -19,5 +19,18 @@
     height: 200px;
     padding: 200px;
     background: white;
-    margin: 50px;
+}
+
+
+.box.orange > i{
+    color:orange;
+}
+
+.box.blue > i{
+    color:blue;
+}
+
+
+.box.green > i{
+    color:green;
 }

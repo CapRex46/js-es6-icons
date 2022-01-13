@@ -113,39 +113,21 @@ const icons = [
 	}
 ];
 
-function getIconClassHtml(iconInfo) {
-    const {name, prefix, family} = iconInfo;
-    return `${family} ${prefix}${name}`;
+function createBoxIcon(icons) {
+    return `    
+	<div class="box ${icons.color}">
+		<i class="${icons.family} ${icons.prefix}${icons.name}"></i>
+	</div>
+	`
 }
 
+const containerHtml = document.querySelector('.container');
+const selectElement = document.getElementById('icon-filter')
 
-const container = document.getElementById('container');
-
-icons.forEach(element => {
-    const newBox = document.createElement('div');
-    newBox.className = `box ${getIconClassHtml(element)}`;
-    newBox.classList.add(element.color);
-    container.append(newBox);
-    document.getElementsByClassName('div').style.property = "${icons[i].color}";
+icons.forEach((icons) =>{
+	containerHtml.innerHTML += createBoxIcon(icons)
 })
 
+selectElement.addEventListener('change', function(){
 
-
-
-
-
-
-
-// const containerHtml = document.querySelector('.container')
-
-// for (let i = 0; i < icons.length; i++) {
-//     containerHtml.innerHtml += 
-//     `
-//     <div class="box">
-//     <i class="fas ${icons[i].prefix.name}"></i>
-//     <p>${icons[i].name}</p>
-//     </div>
-//     `
-    
-// } 
-
+})
